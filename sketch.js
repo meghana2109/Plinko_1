@@ -68,10 +68,7 @@ function setup() {
     plinkos.push(new Plinko(j,375));
   }
 
-  //create particle objects
-  if (frameCount%60 === 0){
-    particles.push(new Particle(random(width/2-30, width/2+30), 10, 10));
-  }
+ 
 }
 
 function draw() {
@@ -94,5 +91,10 @@ function draw() {
   //display the paricles 
   for (var j = 0; j < particles.length; j++) {
     particles[j].display();
+  }
+
+   //create particle objects
+   if (frameCount%60 === 0){
+    particles.push(new Particle(random(width/2-30, width/2+30), 10, 10));
   }
 }
